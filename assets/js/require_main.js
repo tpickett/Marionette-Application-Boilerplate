@@ -1,3 +1,4 @@
+//Getting in correct branch
 requirejs.config({
 	baseURL: "assets/js",
 	paths:{
