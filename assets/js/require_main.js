@@ -1,34 +1,33 @@
-//Getting in correct branch
 requirejs.config({
-	baseURL: "assets/js",
-	paths:{
-		marionette: "vendor/backbone.marionette",
-		backbone: "vendor/backbone",
-		jquery: "vendor/jquery",
-		underscore: "vendor/underscore",
-		"bootstrap": "vendor/bootstrap"
-	},
-	shim:{
-		underscore:{
-			exports: "_"
-		},
-		backbone: {
-			deps: ['jquery','underscore'],
-			exports: "Backbone"
-		},
-		marionette: {
-			deps: ['backbone'],
-			exports: "Marionette"
-		},
-		"bootstrap": {
-			deps: ['jquery']
-		},
-		app: {
-			deps:['marionette', 'bootstrap'],
-			exports: "Boilerplate"
-		}
-	}
+  baseUrl: "assets/js",
+  paths: {
+    backbone: "vendor/backbone",
+    jquery: "vendor/jquery",
+    "jquery-ui": "vendor/jquery-ui",
+    json2: "vendor/json2",
+    localstorage: "vendor/backbone.localstorage",
+    marionette: "vendor/backbone.marionette",
+    tpl: "vendor/tpl",
+    underscore: "vendor/underscore"
+  },
+
+  shim: {
+    underscore: {
+      exports: "_"
+    },
+    backbone: {
+      deps: ["jquery", "underscore", "json2"],
+      exports: "Backbone"
+    },
+    marionette: {
+      deps: ["backbone"],
+      exports: "Marionette"
+    },
+    "jquery-ui": ["jquery"],
+    localstorage: ["backbone"]
+  }
 });
-require(["app"], function(Boilerplate){
-	Boilerplate.start();
+
+require(["app"], function(BoilerPlate){
+  BoilerPlate.start();
 });

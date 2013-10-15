@@ -1,39 +1,46 @@
-define(['marionette', 'apps/exampleApp/modal/modalRegion'], function(Marionette, ModalRegion){
-	var Boilerplate = new Marionette.Application();
+//define(["marionette", "apps/config/marionette/regions/dialog"], function(Marionette){
+define(["marionette"], function(Marionette){
+  var BoilerPlate = new Marionette.Application();
 
-	/*
-	*	Marionette Application Regions
-	*-----------------------------------------------------------*/
-	Boilerplate.addRegions({
-		sidebarRegion: "#sidebar_region",
-		contentRegion: "#content_region",
-		modal: ModalRegion
-	});
+  /*
+  * Marionette Application Regions
+  *-----------------------------------------------------------*/
+  BoilerPlate.addRegions({
+    sidebarRegion: "#sidebar_region",
+    contentRegion: "#content_region",
+    //modal: ModalRegion
+  });
 
 
 
-	/*
-	*	Marionette Application Routing
-	*-----------------------------------------------------------*/
-	Boilerplate.navigate = function(route, options) {
-		options || (options = {});
-		Backbone.history.navigate(route, options);
-	}
+  /*
+  * Marionette Application Routing
+  *-----------------------------------------------------------*/
+  BoilerPlate.navigate = function(route, options) {
+    options || (options = {});
+    Backbone.history.navigate(route, options);
+  }
 
-	Boilerplate.getCurrentRoute = function() {
-		return Backbone.history.fragment;
-	}
+  BoilerPlate.getCurrentRoute = function() {
+    return Backbone.history.fragment;
+  }
 
-	/*
-	* Application Initialization
-	*-----------------------------------------------------------*/
-	Boilerplate.on("initialize:after", function(){
-		//instantiate
-		
-		if (Backbone.history) {
-			Backbone.history.start();
-		}
-	});
+  /*
+  * Application Initialization
+  *-----------------------------------------------------------*/
+  BoilerPlate.on("initialize:after", function(){
+    //instantiate
+require(["app", "entities/entity"], function(ContactManager){
+    var fetchingContacts = BoilerPlate.request("mBoilerPlate:collection");
+    $.when(fetchingContacts).done(function(contacts){
+      console.log(contacts);
+    });
+});
 
-	return Boilerplate;
+    if (Backbone.history) {
+      Backbone.history.start();
+    }
+  });
+
+  return BoilerPlate;
 });
