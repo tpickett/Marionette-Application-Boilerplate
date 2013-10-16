@@ -1,4 +1,4 @@
-define(["app", "tpl!apps/exampleApp/list/templates/layout.tpl", "tpl!apps/exampleApp/list/templates/sidebarListGroup.tpl", "tpl!apps/exampleApp/list/templates/sidebarItem.tpl", "tpl!apps/exampleApp/list/templates/panelButtons.tpl"], function(Boilerplate, layoutTpl, sidebarListGroupTpl, sidebarItemTpl, panelButtonsTpl){
+define(["app", "hbs!apps/exampleApp/list/templates/layout", "hbs!apps/exampleApp/list/templates/sidebarListGroup", "hbs!apps/exampleApp/list/templates/sidebarItem", "hbs!apps/exampleApp/list/templates/panelButtons"], function(Boilerplate, layoutTpl, sidebarListGroupTpl, sidebarItemTpl, panelButtonsTpl){
 	Boilerplate.module("ExampleApp.List.View", function(View, Boilerplate, Backbone, Marionette, $, _){
 		/*
 		* Marionette Application List Views

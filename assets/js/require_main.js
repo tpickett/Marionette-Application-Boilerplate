@@ -1,11 +1,5 @@
 requirejs.config({
   baseUrl: "assets/js",
-  /*
-  * handlebars template loader
-  */
-  // hbs: {
-  //   templateExtension: "html"
-  // }
   paths: {
     backbone: "vendor/backbone",
     jquery: "vendor/jquery",
@@ -14,14 +8,11 @@ requirejs.config({
     localstorage: "vendor/backbone.localstorage",
     marionette: "vendor/backbone.marionette",
     /*
-    //underscore template loader
+    * underscore template loader:
+    * tpl: "vendor/tpl",
     */
-    tpl: "vendor/tpl",
-    /*
-    //handlebars template loader
     hbs: "vendor/hbs",
-    handlebars: "vendor/Handlebars.js",
-    */
+    Handlebars: "vendor/handlebars",
     underscore: "vendor/underscore"
   },
 
@@ -32,6 +23,9 @@ requirejs.config({
     backbone: {
       deps: ["jquery", "underscore", "json2"],
       exports: "Backbone"
+    },
+    Handlebars:{
+      exports: "Handlebars"
     },
     marionette: {
       deps: ["backbone"],

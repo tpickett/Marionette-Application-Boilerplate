@@ -1,0 +1,1 @@
+<a href="/backboneblackhawk/#clients/<%= id %>" class="col-lg-9 pull-left js-view"><%= Name %></a><span id="col-lg-1 pull-right" class="js-edit"><i class="glyphicon glyphicon-edit"></i></span><span id="col-lg-1 pull-right" class="js-delete"><i class="glyphicon glyphicon-floppy-remove"></i></span>

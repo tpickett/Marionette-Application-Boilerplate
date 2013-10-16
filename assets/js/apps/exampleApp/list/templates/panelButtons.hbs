@@ -1,0 +1,1 @@
+<button class="col-lg-12 btn btn-lg btn-primary js-new">New Button</button>
