@@ -1,5 +1,11 @@
 requirejs.config({
   baseUrl: "assets/js",
+  /*
+  * handlebars template loader
+  */
+  // hbs: {
+  //   templateExtension: "html"
+  // }
   paths: {
     backbone: "vendor/backbone",
     jquery: "vendor/jquery",
