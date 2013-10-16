@@ -7,7 +7,15 @@ requirejs.config({
     json2: "vendor/json2",
     localstorage: "vendor/backbone.localstorage",
     marionette: "vendor/backbone.marionette",
+    /*
+    //underscore template loader
+    */
     tpl: "vendor/tpl",
+    /*
+    //handlebars template loader
+    hbs: "vendor/hbs",
+    handlebars: "vendor/Handlebars.js",
+    */
     underscore: "vendor/underscore"
   },
 
