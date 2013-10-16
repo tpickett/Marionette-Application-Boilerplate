@@ -30,12 +30,12 @@ define(["marionette"], function(Marionette){
   *-----------------------------------------------------------*/
   BoilerPlate.on("initialize:after", function(){
     //instantiate
-require(["app", "entities/entity"], function(ContactManager){
-    var fetchingContacts = BoilerPlate.request("mBoilerPlate:collection");
-    $.when(fetchingContacts).done(function(contacts){
-      console.log(contacts);
+    require(["entities/items"], function(){
+      var fetchingContacts = BoilerPlate.request("mBoilerPlate:collection");
+      $.when(fetchingContacts).done(function(contacts){
+        console.log(contacts);
+      });
     });
-});
 
     if (Backbone.history) {
       Backbone.history.start();
